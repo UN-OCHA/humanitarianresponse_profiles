@@ -1425,7 +1425,6 @@ function humanitarianresponse_profiles_field_default_fields() {
             'parent' => '0',
           ),
         ),
-        'options_list_callback' => '_taxonomy_access_term_options',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
