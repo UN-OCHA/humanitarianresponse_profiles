@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the humanitarianresponse profiles feature.
+ */
+
+include_once('humanitarianresponse_profiles.features.inc');
