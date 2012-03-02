@@ -351,7 +351,7 @@ function humanitarianresponse_profiles_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'humanitarian-profile';
+  $handler->display->display_options['path'] = 'coordination/humanitarian-profile';
   $translatables['humanitarian_profile'] = array(
     t('Master'),
     t('Humanitarian Profile'),
