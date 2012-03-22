@@ -22,7 +22,7 @@ function humanitarianresponse_profiles_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Humanitarian Profile';
+  $handler->display->display_options['title'] = 'Humanitarian Profile Summary';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -101,61 +101,67 @@ function humanitarianresponse_profiles_views_default_views() {
   $handler->display->display_options['style_options']['override'] = 1;
   $handler->display->display_options['style_options']['sticky'] = 0;
   $handler->display->display_options['style_options']['empty_table'] = 0;
+  /* Relationship: Content: Location (field_locations) */
+  $handler->display->display_options['relationships']['field_locations_tid']['id'] = 'field_locations_tid';
+  $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['relationships']['field_locations_tid']['field'] = 'field_locations_tid';
+  $handler->display->display_options['relationships']['field_locations_tid']['required'] = 0;
+  /* Field: Taxonomy term: PCode */
+  $handler->display->display_options['fields']['field_location_pcode']['id'] = 'field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['table'] = 'field_data_field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['field'] = 'field_location_pcode';
+  $handler->display->display_options['fields']['field_location_pcode']['relationship'] = 'field_locations_tid';
+  $handler->display->display_options['fields']['field_location_pcode']['label'] = '';
+  $handler->display->display_options['fields']['field_location_pcode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_location_pcode']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_location_pcode']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_location_pcode']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_location_pcode']['field_api_classes'] = 0;
   /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_loc']['id'] = 'field_loc';
-  $handler->display->display_options['fields']['field_loc']['table'] = 'field_data_field_loc';
-  $handler->display->display_options['fields']['field_loc']['field'] = 'field_loc';
-  $handler->display->display_options['fields']['field_loc']['label'] = '';
-  $handler->display->display_options['fields']['field_loc']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_loc']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_loc']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_loc']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_loc']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_loc']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_loc']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_loc']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_loc']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_loc']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_loc']['type'] = 'hs_taxonomy_term_reference_hierarchical_text';
-  $handler->display->display_options['fields']['field_loc']['group_rows'] = 1;
-  $handler->display->display_options['fields']['field_loc']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_loc']['delta_reversed'] = 0;
-  $handler->display->display_options['fields']['field_loc']['delta_first_last'] = 0;
-  $handler->display->display_options['fields']['field_loc']['field_api_classes'] = 0;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Location';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_loc]';
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = 0;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
+  $handler->display->display_options['fields']['field_locations']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_locations']['alter']['text'] = '[field_locations]
+PCode: [field_location_pcode]';
+  $handler->display->display_options['fields']['field_locations']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['nl2br'] = 1;
+  $handler->display->display_options['fields']['field_locations']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_locations']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_locations']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_locations']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_locations']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_locations']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_locations']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_locations']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_locations']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_locations']['group_rows'] = 1;
+  $handler->display->display_options['fields']['field_locations']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_locations']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_locations']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_locations']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_locations']['field_api_classes'] = 0;
   /* Field: Content: Date of Data */
   $handler->display->display_options['fields']['field_humprofile_date']['id'] = 'field_humprofile_date';
   $handler->display->display_options['fields']['field_humprofile_date']['table'] = 'field_data_field_humprofile_date';
@@ -352,28 +358,6 @@ function humanitarianresponse_profiles_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'coordination/humanitarian-profile';
-  $translatables['humanitarian_profile'] = array(
-    t('Master'),
-    t('Humanitarian Profile'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('Location'),
-    t('[field_loc]'),
-    t('Date of Data'),
-    t('Affected'),
-    t('Displaced'),
-    t('Non-Displaced'),
-    t('Casualities'),
-    t('In Need of Humanitarian Assistance'),
-    t('Page'),
-  );
   $export['humanitarian_profile'] = $view;
 
   return $export;

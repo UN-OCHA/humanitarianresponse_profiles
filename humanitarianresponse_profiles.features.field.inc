@@ -803,7 +803,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -873,7 +873,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '8',
+        'weight' => '7',
       ),
     ),
   );
@@ -938,7 +938,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -1033,7 +1033,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -1098,7 +1098,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -1173,7 +1173,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '10',
+        'weight' => '9',
       ),
     ),
   );
@@ -1238,7 +1238,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -1313,7 +1313,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '10',
       ),
     ),
   );
@@ -1388,22 +1388,19 @@ function humanitarianresponse_profiles_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_loc'
-  $fields['node-humanitarian_profile-field_loc'] = array(
+  // Exported field: 'node-humanitarian_profile-field_locations'
+  $fields['node-humanitarian_profile-field_locations'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_loc',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
+      'field_name' => 'field_locations',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -1437,16 +1434,10 @@ function humanitarianresponse_profiles_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'hs_taxonomy',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hs_taxonomy_term_reference_hierarchical_text',
-          'weight' => '0',
-        ),
-        'entityreference_view_widget' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 10,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1456,8 +1447,8 @@ function humanitarianresponse_profiles_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_loc',
-      'label' => 'Location',
+      'field_name' => 'field_locations',
+      'label' => 'Location(s)',
       'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1467,7 +1458,7 @@ function humanitarianresponse_profiles_field_default_fields() {
         'module' => 'hs_taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_hs',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -1483,7 +1474,7 @@ function humanitarianresponse_profiles_field_default_fields() {
   t('IDP');
   t('In Need of Humanitarian Assistance');
   t('Injured');
-  t('Location');
+  t('Location(s)');
   t('Methodology');
   t('Missing');
   t('Non-Displaced');
