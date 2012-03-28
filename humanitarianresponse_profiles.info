@@ -1,5 +1,6 @@
 name = "Humanitarianresponse Profiles"
 description = "Humanitarian Profiles"
+core = "7.x"
 package = "Humanitarianresponse"
 php = "5.2.4"
 dependencies[] = "ctools"
