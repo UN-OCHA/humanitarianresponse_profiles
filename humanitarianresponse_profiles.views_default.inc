@@ -357,7 +357,7 @@ PCode: [field_location_pcode]';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'coordination/humanitarian-profile';
+  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile';
   $export['humanitarian_profile'] = $view;
 
   return $export;
