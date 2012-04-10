@@ -42,7 +42,7 @@ function humanitarianresponse_profiles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_humanitarian_profile';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['comment_humanitarian_profile'] = $strongarm;
 
   $strongarm = new stdClass();
