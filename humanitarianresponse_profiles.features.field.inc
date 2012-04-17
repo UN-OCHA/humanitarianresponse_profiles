@@ -61,7 +61,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'entity_type' => 'field_collection_item',
       'field_name' => 'field_humprofile_cas_people',
-      'label' => 'Casualities',
+      'label' => 'Casualties',
       'required' => 0,
       'settings' => array(
         'max' => '',
@@ -928,7 +928,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_humprofile_casualities',
-      'label' => 'Casualities',
+      'label' => 'Casualties',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -1466,7 +1466,7 @@ function humanitarianresponse_profiles_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Affected');
-  t('Casualities');
+  t('Casualties');
   t('Date of Data');
   t('Dead');
   t('Displaced');

@@ -32,40 +32,40 @@ function humanitarianresponse_profiles_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'field_loc' => 'field_loc',
-    'title' => 'title',
+    'field_location_pcode' => 'field_location_pcode',
+    'field_locations' => 'field_locations',
     'field_humprofile_date' => 'field_humprofile_date',
     'field_humprofile_affected' => 'field_humprofile_affected',
-    'field_humprofile_displaced' => 'field_humprofile_displaced',
-    'field_humprofile_non_displaced' => 'field_humprofile_non_displaced',
+    'field_humprofile_displaced' => 'field_humprofile_affected',
+    'field_humprofile_non_displaced' => 'field_humprofile_affected',
     'field_humprofile_casualities' => 'field_humprofile_casualities',
     'field_humprofile_assistance' => 'field_humprofile_assistance',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'field_loc' => array(
-      'align' => 'views-align-left',
+    'field_location_pcode' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'title' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => 'views-align-left',
+    'field_locations' => array(
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_humprofile_date' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-left',
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_humprofile_affected' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-left',
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -86,14 +86,14 @@ function humanitarianresponse_profiles_views_default_views() {
     'field_humprofile_casualities' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-left',
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
     'field_humprofile_assistance' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
-      'align' => 'views-align-left',
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
@@ -106,6 +106,12 @@ function humanitarianresponse_profiles_views_default_views() {
   $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['relationships']['field_locations_tid']['field'] = 'field_locations_tid';
   $handler->display->display_options['relationships']['field_locations_tid']['required'] = 0;
+  /* Relationship: Content: Displaced (field_humprofile_displaced) */
+  $handler->display->display_options['relationships']['field_humprofile_displaced_value']['id'] = 'field_humprofile_displaced_value';
+  $handler->display->display_options['relationships']['field_humprofile_displaced_value']['table'] = 'field_data_field_humprofile_displaced';
+  $handler->display->display_options['relationships']['field_humprofile_displaced_value']['field'] = 'field_humprofile_displaced_value';
+  $handler->display->display_options['relationships']['field_humprofile_displaced_value']['required'] = 0;
+  $handler->display->display_options['relationships']['field_humprofile_displaced_value']['delta'] = '-1';
   /* Field: Taxonomy term: PCode */
   $handler->display->display_options['fields']['field_location_pcode']['id'] = 'field_location_pcode';
   $handler->display->display_options['fields']['field_location_pcode']['table'] = 'field_data_field_location_pcode';
@@ -166,6 +172,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_date']['id'] = 'field_humprofile_date';
   $handler->display->display_options['fields']['field_humprofile_date']['table'] = 'field_data_field_humprofile_date';
   $handler->display->display_options['fields']['field_humprofile_date']['field'] = 'field_humprofile_date';
+  $handler->display->display_options['fields']['field_humprofile_date']['label'] = 'Date of Data (dd/mm/yyyy)';
   $handler->display->display_options['fields']['field_humprofile_date']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_humprofile_date']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_humprofile_date']['alter']['absolute'] = 0;
@@ -197,7 +204,10 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_affected']['id'] = 'field_humprofile_affected';
   $handler->display->display_options['fields']['field_humprofile_affected']['table'] = 'field_data_field_humprofile_affected';
   $handler->display->display_options['fields']['field_humprofile_affected']['field'] = 'field_humprofile_affected';
-  $handler->display->display_options['fields']['field_humprofile_affected']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_humprofile_affected']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_humprofile_affected']['alter']['text'] = '<div class="field field-name-field-humprofile-affected field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Affected:</div><div class="field-items"><div class="field-item">[field_humprofile_affected]</div></div>
+</div>';
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['external'] = 0;
@@ -244,9 +254,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_displaced']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_humprofile_displaced']['type'] = 'field_collection_fields';
   $handler->display->display_options['fields']['field_humprofile_displaced']['settings'] = array(
-    'name' => 'field_collection_view',
-    'display_id' => 'default',
-    'add' => 'Add',
+    'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_humprofile_displaced']['field_api_classes'] = 0;
   /* Field: Content: Non-Displaced */
@@ -280,7 +288,11 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_casualities']['id'] = 'field_humprofile_casualities';
   $handler->display->display_options['fields']['field_humprofile_casualities']['table'] = 'field_data_field_humprofile_casualities';
   $handler->display->display_options['fields']['field_humprofile_casualities']['field'] = 'field_humprofile_casualities';
+  $handler->display->display_options['fields']['field_humprofile_casualities']['label'] = 'Casualties';
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['text'] = '<div class="field field-name-field-humprofile-casualties field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Casualties:</div><div class="field-items"><div class="field-item">[field_humprofile_casualities]</div></div>
+</div>';
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['external'] = 0;
@@ -307,7 +319,11 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_assistance']['id'] = 'field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['table'] = 'field_data_field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['field'] = 'field_humprofile_assistance';
-  $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_humprofile_assistance']['label'] = 'Need Assistance';
+  $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['text'] = '<div class="field field-name-field-humprofile-assistance field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Need Assistance:</div><div class="field-items"><div class="field-item">[field_humprofile_assistance]</div></div>
+</div>';
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['external'] = 0;
