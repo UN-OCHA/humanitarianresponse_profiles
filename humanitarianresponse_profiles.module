@@ -13,11 +13,11 @@ include_once('humanitarianresponse_profiles.features.inc');
  */
 function humanitarianresponse_profiles_field_attach_view_alter(&$output, $context) {
   $entity = $context['entity'];
-  debug($entity->type);
   // We proceed only on nodes.
   if ($context['entity_type'] != 'field_collection_item' || $context['view_mode'] != 'full') {
     return;
   }
+  debug($entity);
  
   /*$node = $context['entity'];
   // Load all instances of the fields for the node.
