@@ -12,13 +12,14 @@ include_once('humanitarianresponse_profiles.features.inc');
  * Show titles of empty fields.
  */
 function humanitarianresponse_profiles_field_attach_view_alter(&$output, $context) {
-  debug($context['entity_type']);
+  $entity = $context['entity'];
+  debug($entity->type);
   // We proceed only on nodes.
-  /*if ($context['entity_type'] != 'node' || $context['view_mode'] != 'full') {
+  if ($context['entity_type'] != 'field_collection_item' || $context['view_mode'] != 'full') {
     return;
   }
  
-  $node = $context['entity'];
+  /*$node = $context['entity'];
   // Load all instances of the fields for the node.
   $instances = _field_invoke_get_instances('node', $node->type, array('default' => TRUE, 'deleted' => FALSE));
  
