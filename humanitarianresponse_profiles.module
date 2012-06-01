@@ -14,16 +14,15 @@ include_once('humanitarianresponse_profiles.features.inc');
 function humanitarianresponse_profiles_field_attach_view_alter(&$output, $context) {
   $entity = $context['entity'];
   // We proceed only on nodes.
-  if ($context['entity_type'] != 'field_collection_item' || $context['view_mode'] != 'full') {
+  if ($context['entity_type'] != 'field_collection_item' || $context['view_mode'] != 'full' || !in_array($entity->field_name, array('field_humprofile_casualties', 'field_humprofile_displaced', 'field_humprofile_non_displaced'))) {
     return;
   }
-  debug($entity);
- 
-  /*$node = $context['entity'];
+
   // Load all instances of the fields for the node.
-  $instances = _field_invoke_get_instances('node', $node->type, array('default' => TRUE, 'deleted' => FALSE));
+  $instances = _field_invoke_get_instances('field_collection_item', $entity->field_name, array('default' => TRUE, 'deleted' => FALSE));
+  debug($instances);
  
-  foreach ($instances as $field_name => $instance) {
+  /*foreach ($instances as $field_name => $instance) {
     // Set content for fields they are empty.
     if (empty($node->{$field_name})) {
       $display = field_get_display($instance, 'full', $node);
