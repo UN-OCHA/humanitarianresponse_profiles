@@ -40,6 +40,7 @@ function humanitarianresponse_profiles_views_default_views() {
     'field_humprofile_non_displaced' => 'field_humprofile_affected',
     'field_humprofile_casualities' => 'field_humprofile_casualities',
     'field_humprofile_assistance' => 'field_humprofile_assistance',
+    'edit_node' => 'edit_node',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -96,6 +97,11 @@ function humanitarianresponse_profiles_views_default_views() {
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
   );
   $handler->display->display_options['style_options']['override'] = 1;
@@ -204,6 +210,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_affected']['id'] = 'field_humprofile_affected';
   $handler->display->display_options['fields']['field_humprofile_affected']['table'] = 'field_data_field_humprofile_affected';
   $handler->display->display_options['fields']['field_humprofile_affected']['field'] = 'field_humprofile_affected';
+  $handler->display->display_options['fields']['field_humprofile_affected']['label'] = 'Numbers of People';
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['text'] = '<div class="field field-name-field-humprofile-affected field-type-number-integer field-label-inline clearfix">
 <div class="field-label">Affected:</div><div class="field-items"><div class="field-item">[field_humprofile_affected]</div></div>
@@ -222,6 +229,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_affected']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['element_label_colon'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_humprofile_affected']['empty'] = 'No data';
   $handler->display->display_options['fields']['field_humprofile_affected']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_humprofile_affected']['hide_alter_empty'] = 1;
@@ -284,11 +292,11 @@ PCode: [field_location_pcode]';
     'view_mode' => 'full',
   );
   $handler->display->display_options['fields']['field_humprofile_non_displaced']['field_api_classes'] = 0;
-  /* Field: Content: Casualities */
+  /* Field: Content: Casualties */
   $handler->display->display_options['fields']['field_humprofile_casualities']['id'] = 'field_humprofile_casualities';
   $handler->display->display_options['fields']['field_humprofile_casualities']['table'] = 'field_data_field_humprofile_casualities';
   $handler->display->display_options['fields']['field_humprofile_casualities']['field'] = 'field_humprofile_casualities';
-  $handler->display->display_options['fields']['field_humprofile_casualities']['label'] = 'Casualties';
+  $handler->display->display_options['fields']['field_humprofile_casualities']['label'] = '';
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['text'] = '<div class="field field-name-field-humprofile-casualties field-type-number-integer field-label-inline clearfix">
 <div class="field-label">Casualties:</div><div class="field-items"><div class="field-item">[field_humprofile_casualities]</div></div>
@@ -305,7 +313,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_humprofile_casualities']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['field_humprofile_casualities']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_humprofile_casualities']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['field_humprofile_casualities']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_humprofile_casualities']['empty_zero'] = 0;
@@ -319,7 +327,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_assistance']['id'] = 'field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['table'] = 'field_data_field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['field'] = 'field_humprofile_assistance';
-  $handler->display->display_options['fields']['field_humprofile_assistance']['label'] = 'Need Assistance';
+  $handler->display->display_options['fields']['field_humprofile_assistance']['label'] = '';
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['text'] = '<div class="field field-name-field-humprofile-assistance field-type-number-integer field-label-inline clearfix">
 <div class="field-label">Need Assistance:</div><div class="field-items"><div class="field-item">[field_humprofile_assistance]</div></div>
@@ -336,8 +344,9 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_humprofile_assistance']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['field_humprofile_assistance']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_humprofile_assistance']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_humprofile_assistance']['empty'] = 'No data';
   $handler->display->display_options['fields']['field_humprofile_assistance']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_humprofile_assistance']['hide_alter_empty'] = 1;
@@ -346,6 +355,28 @@ PCode: [field_location_pcode]';
     'prefix_suffix' => 0,
   );
   $handler->display->display_options['fields']['field_humprofile_assistance']['field_api_classes'] = 0;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Edit';
+  $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['edit_node']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['edit_node']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['edit_node']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['edit_node']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['edit_node']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['edit_node']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['edit_node']['hide_alter_empty'] = 1;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -370,6 +401,19 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'humanitarian_profile' => 'humanitarian_profile',
   );
+  /* Filter criterion: Content: Location (field_locations) */
+  $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
+  $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
+  $handler->display->display_options['filters']['field_locations_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_locations_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_locations_tid']['expose']['operator_id'] = 'field_locations_tid_op';
+  $handler->display->display_options['filters']['field_locations_tid']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_locations_tid']['expose']['operator'] = 'field_locations_tid_op';
+  $handler->display->display_options['filters']['field_locations_tid']['expose']['identifier'] = 'field_locations_tid';
+  $handler->display->display_options['filters']['field_locations_tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['field_locations_tid']['vocabulary'] = 'locations';
+  $handler->display->display_options['filters']['field_locations_tid']['error_message'] = 1;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

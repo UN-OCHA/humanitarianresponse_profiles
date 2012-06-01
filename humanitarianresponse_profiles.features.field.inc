@@ -175,7 +175,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',

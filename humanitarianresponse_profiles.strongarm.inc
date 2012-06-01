@@ -13,6 +13,27 @@ function humanitarianresponse_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_humanitarian_profile';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_humanitarian_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_humanitarian_profile';
+  $strongarm->value = '[node:field_locations] [node:field_humprofile_date]';
+  $export['auto_entitylabel_pattern_node_humanitarian_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_humanitarian_profile';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_humanitarian_profile'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_humanitarian_profile';
   $strongarm->value = 0;
   $export['comment_anonymous_humanitarian_profile'] = $strongarm;
@@ -62,6 +83,13 @@ function humanitarianresponse_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd/m/Y - H:i';
+  $export['date_format_short'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_humanitarian_profile';
   $strongarm->value = '0';
   $export['language_content_type_humanitarian_profile'] = $strongarm;
@@ -88,7 +116,7 @@ function humanitarianresponse_profiles_strongarm() {
   $strongarm->name = 'node_options_humanitarian_profile';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
+    1 => 'revision',
   );
   $export['node_options_humanitarian_profile'] = $strongarm;
 
@@ -103,7 +131,7 @@ function humanitarianresponse_profiles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_humanitarian_profile';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_humanitarian_profile'] = $strongarm;
 
   return $export;
