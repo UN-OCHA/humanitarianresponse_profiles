@@ -22,6 +22,7 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
   $instances = _field_invoke_get_instances('field_collection_item', $entity->field_name, array('default' => TRUE, 'deleted' => FALSE));
  
   foreach ($instances as $field_name => $instance) {
+    debug($entity->{$field_name});
     // Set content for fields they are empty.
     if (empty($entity->{$field_name})) {
       $display = field_get_display($instance, 'full', $entity);
