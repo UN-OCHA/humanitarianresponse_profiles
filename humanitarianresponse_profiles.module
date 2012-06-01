@@ -20,12 +20,11 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
 
   // Load all instances of the fields for the node.
   $instances = _field_invoke_get_instances('field_collection_item', $entity->field_name, array('default' => TRUE, 'deleted' => FALSE));
-  debug($instances);
  
-  /*foreach ($instances as $field_name => $instance) {
+  foreach ($instances as $field_name => $instance) {
     // Set content for fields they are empty.
-    if (empty($node->{$field_name})) {
-      $display = field_get_display($instance, 'full', $node);
+    if (empty($entity->{$field_name})) {
+      $display = field_get_display($instance, 'full', $entity);
       // Do not add field that is hidden in current display.
       if ($display['type'] == 'hidden') {
         continue;
@@ -36,16 +35,16 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
       $output[$field_name] = array(
         '#theme' => 'field',
         '#title' => $instance['label'],
-        '#label_display' => 'above',
+        '#label_display' => 'inline',
         '#field_type' => $field['type'],
         '#field_name' => $field_name,
-        '#bundle' => $node->type,
-        '#object' => $node,
+        '#bundle' => $entity->field_name,
+        '#object' => $entity,
         '#items' => array(),
-        '#entity_type' => 'node',
+        '#entity_type' => 'field_collection_item',
         '#weight' => $display['weight'],
         0 => array('#markup' => '&nbsp;'),
       );
     }
-  }*/
+  }
 }
