@@ -43,7 +43,7 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
         '#items' => array(),
         '#entity_type' => 'field_collection_item',
         '#weight' => $display['weight'],
-        0 => array('#markup' => '&nbsp;'),
+        0 => array('#markup' => t('No data')),
       );
     }
   }
