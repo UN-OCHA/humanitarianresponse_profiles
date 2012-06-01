@@ -12,7 +12,7 @@ include_once('humanitarianresponse_profiles.features.inc');
  * Show titles of empty fields.
  */
 function humanitarianresponse_profiles_field_attach_view_alter(&$output, $context) {
-  debug($context);
+  debug($context['entity_type']);
   // We proceed only on nodes.
   /*if ($context['entity_type'] != 'node' || $context['view_mode'] != 'full') {
     return;
