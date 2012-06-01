@@ -40,7 +40,7 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
         '#field_name' => $field_name,
         '#bundle' => $entity->field_name,
         '#object' => $entity,
-        '#items' => array(),
+        '#items' => array(0 => array('value' => '0')),
         '#entity_type' => 'field_collection_item',
         '#weight' => $display['weight'],
         0 => array('#markup' => t('No data')),
