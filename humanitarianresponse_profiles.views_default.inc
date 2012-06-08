@@ -107,6 +107,16 @@ function humanitarianresponse_profiles_views_default_views() {
   $handler->display->display_options['style_options']['override'] = 1;
   $handler->display->display_options['style_options']['sticky'] = 0;
   $handler->display->display_options['style_options']['empty_table'] = 0;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'The Humanitarian Profile is an attempt to account for, on an ongoing basis, the number of people affected by an emergency. Because people may be affected in many different ways by an emergency, different groups are identified within the humanitarian profile, such as displaced, non-displaced, injured, missing, and dead.
+
+When it is available, a more detailed humanitarian profile dataset may be found on the Common Operational Datasets Registry . The information presented on HumanitarianResponse.info represents a summary of that dataset if it is available. Otherwise, the tables presented here represent the most detailed information available. <a href="http://cod.humanitarianresponse.info/node/52">Full Humanitarian Profile guidance.</a>';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['header']['area']['tokenize'] = 0;
   /* Relationship: Content: Location (field_locations) */
   $handler->display->display_options['relationships']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
