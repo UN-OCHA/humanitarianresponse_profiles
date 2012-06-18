@@ -10,6 +10,7 @@ dependencies[] = features
 dependencies[] = field_collection
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_locations
+dependencies[] = i18n_taxonomy
 dependencies[] = number
 dependencies[] = strongarm
 dependencies[] = taxonomy

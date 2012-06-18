@@ -10,7 +10,7 @@
 function humanitarianresponse_profiles_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'
+  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'.
   $fields['field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'] = array(
     'field_config' => array(
       'active' => '1',
@@ -23,6 +23,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -80,7 +81,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_dead'
+  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_dead'.
   $fields['field_collection_item-field_humprofile_casualities-field_humprofile_dead'] = array(
     'field_config' => array(
       'active' => '1',
@@ -93,6 +94,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -150,7 +152,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_injured'
+  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_injured'.
   $fields['field_collection_item-field_humprofile_casualities-field_humprofile_injured'] = array(
     'field_config' => array(
       'active' => '1',
@@ -163,6 +165,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -220,7 +223,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_missing'
+  // Exported field: 'field_collection_item-field_humprofile_casualities-field_humprofile_missing'.
   $fields['field_collection_item-field_humprofile_casualities-field_humprofile_missing'] = array(
     'field_config' => array(
       'active' => '1',
@@ -233,6 +236,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -290,7 +294,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'
+  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'.
   $fields['field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'] = array(
     'field_config' => array(
       'active' => '1',
@@ -303,6 +307,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -354,7 +359,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_idp'
+  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_idp'.
   $fields['field_collection_item-field_humprofile_displaced-field_humprofile_idp'] = array(
     'field_config' => array(
       'active' => '1',
@@ -367,6 +372,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -418,7 +424,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_others'
+  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_others'.
   $fields['field_collection_item-field_humprofile_displaced-field_humprofile_others'] = array(
     'field_config' => array(
       'active' => '1',
@@ -431,6 +437,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -482,7 +489,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_refugee'
+  // Exported field: 'field_collection_item-field_humprofile_displaced-field_humprofile_refugee'.
   $fields['field_collection_item-field_humprofile_displaced-field_humprofile_refugee'] = array(
     'field_config' => array(
       'active' => '1',
@@ -495,6 +502,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -546,7 +554,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_host'
+  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_host'.
   $fields['field_collection_item-field_humprofile_non_displaced-field_humprofile_host'] = array(
     'field_config' => array(
       'active' => '1',
@@ -559,6 +567,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -610,7 +619,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'
+  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'.
   $fields['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'] = array(
     'field_config' => array(
       'active' => '1',
@@ -623,6 +632,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -674,7 +684,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'
+  // Exported field: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'.
   $fields['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'] = array(
     'field_config' => array(
       'active' => '1',
@@ -687,6 +697,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -738,7 +749,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_affected'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_affected'.
   $fields['node-humanitarian_profile-field_humprofile_affected'] = array(
     'field_config' => array(
       'active' => '1',
@@ -751,6 +762,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -808,7 +820,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_assistance'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_assistance'.
   $fields['node-humanitarian_profile-field_humprofile_assistance'] = array(
     'field_config' => array(
       'active' => '1',
@@ -821,6 +833,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'number',
       'settings' => array(),
       'translatable' => '0',
@@ -878,7 +891,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_casualities'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_casualities'.
   $fields['node-humanitarian_profile-field_humprofile_casualities'] = array(
     'field_config' => array(
       'active' => '1',
@@ -891,6 +904,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
         'path' => '',
@@ -943,7 +957,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_date'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_date'.
   $fields['node-humanitarian_profile-field_humprofile_date'] = array(
     'field_config' => array(
       'active' => '1',
@@ -956,6 +970,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'date',
       'settings' => array(
         'cache_count' => '4',
@@ -1038,7 +1053,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_displaced'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_displaced'.
   $fields['node-humanitarian_profile-field_humprofile_displaced'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1051,6 +1066,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
         'path' => '',
@@ -1103,7 +1119,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_methodology'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_methodology'.
   $fields['node-humanitarian_profile-field_humprofile_methodology'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1127,6 +1143,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -1178,7 +1195,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_non_displaced'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_non_displaced'.
   $fields['node-humanitarian_profile-field_humprofile_non_displaced'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1191,6 +1208,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'field_collection',
       'settings' => array(
         'path' => '',
@@ -1243,7 +1261,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_notes'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_notes'.
   $fields['node-humanitarian_profile-field_humprofile_notes'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1267,6 +1285,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -1318,7 +1337,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_humprofile_source'
+  // Exported field: 'node-humanitarian_profile-field_humprofile_source'.
   $fields['node-humanitarian_profile-field_humprofile_source'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1342,6 +1361,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -1393,7 +1413,7 @@ function humanitarianresponse_profiles_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-humanitarian_profile-field_locations'
+  // Exported field: 'node-humanitarian_profile-field_locations'.
   $fields['node-humanitarian_profile-field_locations'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1414,6 +1434,7 @@ function humanitarianresponse_profiles_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -1422,6 +1443,7 @@ function humanitarianresponse_profiles_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
