@@ -432,6 +432,43 @@ PCode: [field_location_pcode]';
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile';
+  $translatables['humanitarian_profile'] = array(
+    t('Master'),
+    t('Humanitarian Profile Summary'),
+    t('more'),
+    t('Search'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('The Humanitarian Profile is an attempt to account for, on an ongoing basis, the number of people affected by an emergency. Because people may be affected in many different ways by an emergency, different groups are identified within the humanitarian profile, such as displaced, non-displaced, injured, missing, and dead.
+
+When it is available, a more detailed humanitarian profile dataset may be found on the Common Operational Datasets Registry . The information presented on HumanitarianResponse.info represents a summary of that dataset if it is available. Otherwise, the tables presented here represent the most detailed information available. <a href="http://cod.humanitarianresponse.info/node/52">Full Humanitarian Profile guidance.</a>'),
+    t('term from field_locations'),
+    t('field collection item from field_humprofile_displaced'),
+    t('Location'),
+    t('[field_locations]
+PCode: [field_location_pcode]'),
+    t('Date of Data (dd/mm/yyyy)'),
+    t('Numbers of People'),
+    t('<div class="field field-name-field-humprofile-affected field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Affected:</div><div class="field-items"><div class="field-item">[field_humprofile_affected]</div></div>
+</div>'),
+    t('No data'),
+    t('Displaced'),
+    t('Non-Displaced'),
+    t('<div class="field field-name-field-humprofile-casualties field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Casualties:</div><div class="field-items"><div class="field-item">[field_humprofile_casualities]</div></div>
+</div>'),
+    t('<div class="field field-name-field-humprofile-assistance field-type-number-integer field-label-inline clearfix">
+<div class="field-label">Need Assistance:</div><div class="field-items"><div class="field-item">[field_humprofile_assistance]</div></div>
+</div>'),
+    t('Edit'),
+    t('Page'),
+  );
   $export['humanitarian_profile'] = $view;
 
   return $export;
