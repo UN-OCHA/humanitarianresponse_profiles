@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
 dependencies[] = field_collection
+dependencies[] = hr_graphs
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_locations
 dependencies[] = number
