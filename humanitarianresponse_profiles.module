@@ -60,6 +60,7 @@ function humanitarianresponse_profiles_menu() {
 }
 
 function humanitarianresponse_profiles_geojson() {
+  geophp_load();
   $query = new EntityFieldQuery();
   
   $result = $query
@@ -109,13 +110,14 @@ function humanitarianresponse_profiles_geojson() {
     foreach ($latest as $node) {
       $location = taxonomy_term_load($node->field_locations[LANGUAGE_NONE][0]['tid']);
       $date = $node->field_humprofile_date;
-      $wkt = $location->field_location[LANGUAGE_NONE][0]['wkt'];
+      $polygon = geoPHP::load($location->field_location[LANGUAGE_NONE][0]['wkt']);
+      
       $displaced_id = $node->field_humprofile_displaced[LANGUAGE_NONE][0]['value'];
       $displaced = entity_load('field_collection_item', array($displaced_id));
       $idps = $displaced[$displaced_id]->field_humprofile_idp[LANGUAGE_NONE][0]['value'];
       $feature = array(
         'type' => 'Feature',
-        'geometry' => $wkt,
+        'geometry' => $polygon->getCentroid(),
         'properties' => array(
           'name' => $location->name,
           'description' => $idps.' IDPs',
