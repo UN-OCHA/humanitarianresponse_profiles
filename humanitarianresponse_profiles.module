@@ -121,7 +121,7 @@ function humanitarianresponse_profiles_geojson() {
       $idps = $displaced[$displaced_id]->field_humprofile_idp[LANGUAGE_NONE][0]['value'];
       $feature = array(
         'type' => 'Feature',
-        'geometry' => isset($centroid_json) ? $centroid_json : '',
+        'geometry' => isset($centroid_json) ? drupal_json_decode($centroid_json) : '',
         'properties' => array(
           'name' => $location->name,
           'description' => $idps.' IDPs',
