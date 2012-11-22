@@ -113,7 +113,7 @@ function humanitarianresponse_profiles_geojson() {
       $polygon = geoPHP::load($location->field_location[LANGUAGE_NONE][0]['wkt'], 'wkt');
       if (isset($polygon)) {
         $centroid = $polygon->getCentroid();
-        $centroid_wkt = $centroid->out('wkt');
+        $centroid_json = $centroid->out('json');
       }
       
       $displaced_id = $node->field_humprofile_displaced[LANGUAGE_NONE][0]['value'];
@@ -121,7 +121,7 @@ function humanitarianresponse_profiles_geojson() {
       $idps = $displaced[$displaced_id]->field_humprofile_idp[LANGUAGE_NONE][0]['value'];
       $feature = array(
         'type' => 'Feature',
-        'geometry' => isset($centroid_wkt) ? $centroid_wkt : '',
+        'geometry' => isset($centroid_json) ? $centroid_json : '',
         'properties' => array(
           'name' => $location->name,
           'description' => $idps.' IDPs',
