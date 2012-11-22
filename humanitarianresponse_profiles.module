@@ -94,6 +94,7 @@ function humanitarianresponse_profiles_geojson() {
       },';
     }*/
     
+    return array('one' => '1', 'two' => '2');
   }
 }
 
