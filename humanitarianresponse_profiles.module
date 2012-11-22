@@ -52,6 +52,9 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
 function humanitarianresponse_profiles_menu() {
   $items['visuals-data/humanitarian-profile/geojson'] = array(
     'page callback' => 'humanitarianresponse_profiles_geojson',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+    'delivery callback' => 'drupal_json_output',
   );
   return $items;
 }
