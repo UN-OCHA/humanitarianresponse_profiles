@@ -78,7 +78,8 @@ function humanitarianresponse_profiles_geojson() {
     
     foreach ($nodes as $node) {
       $location = taxonomy_term_load($node->field_locations[LANGUAGE_NONE][0]['tid']);
-      debug($node->field_date_of_data);
+      debug($node->field_humprofile_date);
+      $wkt = $location->field_location[LANGUAGE_NONE][0]['wkt'];
       $feature = array(
         'type' => 'Feature',
         'geometry' => '',
