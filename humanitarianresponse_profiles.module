@@ -115,7 +115,7 @@ function humanitarianresponse_profiles_geojson() {
       $idps = $displaced[$displaced_id]->field_humprofile_idp[LANGUAGE_NONE][0]['value'];
       $feature = array(
         'type' => 'Feature',
-        'geometry' => '',
+        'geometry' => $wkt,
         'properties' => array(
           'name' => $location->name,
           'description' => $idps.' IDPs',
