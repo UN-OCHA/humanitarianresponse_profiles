@@ -48,3 +48,51 @@ function humanitarianresponse_profiles_field_attach_view_alter(&$output, $contex
     }
   }
 }
+
+function humanitarianresponse_profiles_menu() {
+  $items['visuals-data/humanitarian-profile/geojson'] = array(
+    'page callback' => 'humanitarianresponse_profiles_geojson',
+  );
+  return $items;
+}
+
+function humanitarianresponse_profiles_geojson() {
+  $query = new EntityFieldQuery();
+  
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'humanitarian_profile')
+    ->propertyCondition('status', '1')
+    ->execute();
+  
+  if (isset($result['node'])) {
+    $nids = array_keys($result['node']);
+    $nodes = entity_load('node', $nids);
+    
+    $return = '{
+        "type": "FeatureCollection",
+        "features": [
+     ';
+    
+    foreach ($nodes as $node) {
+      debug($node->field_locations);
+    }
+    /*foreach ($nodes as $node) {
+      $return .= '{
+       "type": "Feature",
+       "geometry": '.wkt_to_json($row["wkt"]).',
+       "properties": {
+         "name": "'.$row["locationName"].'",
+         "description": "'.$row["totalRefugees"].' Refugees",
+         "personCount": "'.$row["totalRefugees"].'",
+         "date": "'.$row["latest"].'",
+         "radius": "'.$row["totalRefugees"] / $divider .'"
+       }
+      },';
+    }*/
+    
+  }
+}
+
+  
+  
