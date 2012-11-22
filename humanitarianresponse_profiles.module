@@ -92,7 +92,7 @@ function humanitarianresponse_profiles_geojson() {
     
     $return['features'] = $features;
     
-    return $features;
+    return $return;
   }
 }
 
