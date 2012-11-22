@@ -83,7 +83,7 @@ function humanitarianresponse_profiles_geojson() {
       else {
         $date_min = strtotime($latest[$loc_tid]->field_humprofile_date[LANGUAGE_NONE][0]['wkt']);
         $date = strtotime($node->field_humprofile_date[LANGUAGE_NONE][0]['wkt']);
-        if ($date < $date_min) {
+        if ($date > $date_min) {
           $latest[$loc_tid] = $node;
         }
       }
