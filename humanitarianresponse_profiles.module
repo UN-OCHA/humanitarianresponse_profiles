@@ -72,13 +72,31 @@ function humanitarianresponse_profiles_geojson() {
     $nids = array_keys($result['node']);
     $nodes = entity_load('node', $nids);
     
+    $latest = array();
+    
+    // Order nodes by location tid
+    foreach ($nodes as $node) {
+      $loc_tid = $node->field_locations[LANGUAGE_NONE][0]['tid'];
+      if (!isset($latest[$loc_tid])) {
+        $latest[$loc_tid] = $node;
+      }
+      else {
+        $date_min = strtotime($latest[$loc_tid]->field_humprofile_date[LANGUAGE_NONE][0]['wkt']);
+        $date = strtotime($node->field_humprofile_date[LANGUAGE_NONE][0]['wkt']);
+        if ($date < $date_min) {
+          $latest[$loc_tid] = $node;
+        }
+      }
+    }
+        
+    
     $return = array(
       'type' => 'FeatureCollection',
     );
     
-    foreach ($nodes as $node) {
+    foreach ($latest as $node) {
       $location = taxonomy_term_load($node->field_locations[LANGUAGE_NONE][0]['tid']);
-      debug($node->field_humprofile_date);
+      $date = $node->field_humprofile_date;
       $wkt = $location->field_location[LANGUAGE_NONE][0]['wkt'];
       $feature = array(
         'type' => 'Feature',
@@ -86,6 +104,7 @@ function humanitarianresponse_profiles_geojson() {
         'properties' => array(
           'name' => $location->name,
           'description' => 'test',
+          'date' => $date[LANGUAGE_NONE][0]['value'],
         )
       );
       $features[] = $feature;
