@@ -72,29 +72,27 @@ function humanitarianresponse_profiles_geojson() {
     $nids = array_keys($result['node']);
     $nodes = entity_load('node', $nids);
     
-    $return = '{
-        "type": "FeatureCollection",
-        "features": [
-     ';
+    $return = array(
+      'type' => 'FeatureCollection',
+    );
     
     foreach ($nodes as $node) {
-      debug($node->field_locations);
+      $location = taxonomy_term_load($node->field_locations[LANGUAGE_NONE][0]['tid']);
+      debug($location);
+      $feature = array(
+        'type' => 'Feature',
+        'geometry' => '',
+        'properties' => array(
+          'name' => $location->name,
+          'description' => 'test'
+        )
+      );
+      $features[] = $feature;
     }
-    /*foreach ($nodes as $node) {
-      $return .= '{
-       "type": "Feature",
-       "geometry": '.wkt_to_json($row["wkt"]).',
-       "properties": {
-         "name": "'.$row["locationName"].'",
-         "description": "'.$row["totalRefugees"].' Refugees",
-         "personCount": "'.$row["totalRefugees"].'",
-         "date": "'.$row["latest"].'",
-         "radius": "'.$row["totalRefugees"] / $divider .'"
-       }
-      },';
-    }*/
     
-    return array('one' => '1', 'two' => '2');
+    $return['features'] = $features;
+    
+    return $features;
   }
 }
 
