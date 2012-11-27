@@ -431,7 +431,7 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile/xls';
+  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile.xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -605,7 +605,7 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile/xml';
+  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile.xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
