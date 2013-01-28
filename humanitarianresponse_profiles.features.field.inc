@@ -1026,6 +1026,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       'settings' => array(
         'path' => '',
         'entity_translation_sync' => FALSE,
+        'hide_blank_items' => TRUE,
       ),
       'translatable' => '0',
       'type' => 'field_collection',
@@ -1204,6 +1205,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       'settings' => array(
         'path' => '',
         'entity_translation_sync' => FALSE,
+        'hide_blank_items' => TRUE,
       ),
       'translatable' => '0',
       'type' => 'field_collection',
@@ -1363,6 +1365,7 @@ function humanitarianresponse_profiles_field_default_fields() {
       'settings' => array(
         'path' => '',
         'entity_translation_sync' => FALSE,
+        'hide_blank_items' => TRUE,
       ),
       'translatable' => '0',
       'type' => 'field_collection',
