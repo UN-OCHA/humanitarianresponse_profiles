@@ -14,7 +14,7 @@ function humanitarianresponse_profiles_user_default_permissions() {
   $permissions['create humanitarian_profile content'] = array(
     'name' => 'create humanitarian_profile content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -23,7 +23,7 @@ function humanitarianresponse_profiles_user_default_permissions() {
   $permissions['delete own humanitarian_profile content'] = array(
     'name' => 'delete own humanitarian_profile content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
@@ -32,7 +32,7 @@ function humanitarianresponse_profiles_user_default_permissions() {
   $permissions['edit own humanitarian_profile content'] = array(
     'name' => 'edit own humanitarian_profile content',
     'roles' => array(
-      0 => 'editor',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );
