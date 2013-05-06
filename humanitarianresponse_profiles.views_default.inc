@@ -611,83 +611,6 @@ PCode: [field_location_pcode]';
     'default' => 0,
   );
 
-  /* Display: Graph */
-  $handler = $view->new_display('page', 'Graph', 'graph');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['group_by'] = FALSE;
-  $handler->display->display_options['group_by'] = TRUE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'highcharts';
-  $handler->display->display_options['style_options']['format']['chart_type'] = 'line';
-  $handler->display->display_options['style_options']['format']['title'] = 'Humanitarian Profile';
-  $handler->display->display_options['style_options']['format']['legend_enabled'] = 'yes';
-  $handler->display->display_options['style_options']['format']['swap_axes'] = 0;
-  $handler->display->display_options['style_options']['y_axis']['reversed'] = 0;
-  $handler->display->display_options['style_options']['x_axis']['dataset_data'] = array(
-    'field_humprofile_affected' => 'field_humprofile_affected',
-    'field_locations' => 0,
-    'field_humprofile_date' => 0,
-  );
-  $handler->display->display_options['style_options']['x_axis']['dataset_label'] = 'field_humprofile_date';
-  $handler->display->display_options['style_options']['x_axis']['reversed'] = 0;
-  $handler->display->display_options['style_options']['pie']['dataset_data'] = array(
-    'field_locations' => 0,
-    'field_humprofile_date' => 0,
-    'field_humprofile_affected' => 0,
-  );
-  $handler->display->display_options['style_options']['pie']['donut_hole'] = '0';
-  $handler->display->display_options['style_options']['pie']['data_labels'] = 1;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['header'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Location */
-  $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
-  $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
-  $handler->display->display_options['fields']['field_locations']['group_type'] = 'count';
-  $handler->display->display_options['fields']['field_locations']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_locations']['alter']['text'] = '[field_locations]
-PCode: [field_location_pcode]';
-  $handler->display->display_options['fields']['field_locations']['alter']['nl2br'] = TRUE;
-  $handler->display->display_options['fields']['field_locations']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_locations']['separator'] = ', ';
-  /* Field: Content: Date of Data */
-  $handler->display->display_options['fields']['field_humprofile_date']['id'] = 'field_humprofile_date';
-  $handler->display->display_options['fields']['field_humprofile_date']['table'] = 'field_data_field_humprofile_date';
-  $handler->display->display_options['fields']['field_humprofile_date']['field'] = 'field_humprofile_date';
-  $handler->display->display_options['fields']['field_humprofile_date']['label'] = 'Date of Data (dd/mm/yyyy)';
-  $handler->display->display_options['fields']['field_humprofile_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_humprofile_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
-  /* Field: Content: Affected */
-  $handler->display->display_options['fields']['field_humprofile_affected']['id'] = 'field_humprofile_affected';
-  $handler->display->display_options['fields']['field_humprofile_affected']['table'] = 'field_data_field_humprofile_affected';
-  $handler->display->display_options['fields']['field_humprofile_affected']['field'] = 'field_humprofile_affected';
-  $handler->display->display_options['fields']['field_humprofile_affected']['group_type'] = 'sum';
-  $handler->display->display_options['fields']['field_humprofile_affected']['label'] = 'Numbers of People';
-  $handler->display->display_options['fields']['field_humprofile_affected']['alter']['text'] = '<div class="field field-name-field-humprofile-affected field-type-number-integer field-label-inline clearfix">
-<div class="field-label">Affected:</div><div class="field-items"><div class="field-item">[field_humprofile_affected]</div></div>
-</div>';
-  $handler->display->display_options['fields']['field_humprofile_affected']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_humprofile_affected']['empty'] = 'No data';
-  $handler->display->display_options['fields']['field_humprofile_affected']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 0,
-  );
-  $handler->display->display_options['fields']['field_humprofile_affected']['group_columns'] = array(
-    'value' => 'value',
-  );
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile/graph';
   $translatables['humanitarian_profile'] = array(
     t('Master'),
     t('Humanitarian Profile Summary'),
@@ -745,7 +668,6 @@ PCode: [field_location_pcode]'),
     t('Injured'),
     t('Need Assistance'),
     t('XML'),
-    t('Graph'),
   );
   $export['humanitarian_profile'] = $view;
 

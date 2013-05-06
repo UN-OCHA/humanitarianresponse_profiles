@@ -8,7 +8,6 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
 dependencies[] = field_collection
-dependencies[] = highcharts_views
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_locations
 dependencies[] = node
