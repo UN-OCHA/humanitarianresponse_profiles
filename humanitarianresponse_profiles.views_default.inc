@@ -116,7 +116,7 @@ function humanitarianresponse_profiles_views_default_views() {
 
 When it is available, a more detailed humanitarian profile dataset may be found on the Common Operational Datasets Registry . The information presented on HumanitarianResponse.info represents a summary of that dataset if it is available. Otherwise, the tables presented here represent the most detailed information available. <a href="http://cod.humanitarianresponse.info/node/52">Full Humanitarian Profile guidance.</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  /* Relationship: Field: Location (field_locations) */
+  /* Relationship: Content: Location (field_locations) */
   $handler->display->display_options['relationships']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['relationships']['field_locations_tid']['field'] = 'field_locations_tid';
@@ -133,7 +133,7 @@ When it is available, a more detailed humanitarian profile dataset may be found 
   $handler->display->display_options['fields']['field_location_pcode']['label'] = '';
   $handler->display->display_options['fields']['field_location_pcode']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_location_pcode']['element_label_colon'] = FALSE;
-  /* Field: Field: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -247,7 +247,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'humanitarian_profile' => 'humanitarian_profile',
   );
-  /* Filter criterion: Field: Location (field_locations) */
+  /* Filter criterion: Content: Location (field_locations) */
   $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
@@ -291,7 +291,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['field'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -324,63 +324,99 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: Displaced */
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['id'] = 'field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['table'] = 'field_data_field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['field'] = 'field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: IDP */
   $handler->display->display_options['fields']['field_humprofile_idp']['id'] = 'field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['table'] = 'field_data_field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['field'] = 'field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_idp']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Refugee and Asylum seekers */
   $handler->display->display_options['fields']['field_humprofile_refugee']['id'] = 'field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['table'] = 'field_data_field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['field'] = 'field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_refugee']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Others of Concern */
   $handler->display->display_options['fields']['field_humprofile_others']['id'] = 'field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['table'] = 'field_data_field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['field'] = 'field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_others']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Non-Displaced */
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['id'] = 'field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['table'] = 'field_data_field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['field'] = 'field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['relationship'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['label'] = 'Non Displaced';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_non_dis_people']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Host */
   $handler->display->display_options['fields']['field_humprofile_host']['id'] = 'field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['table'] = 'field_data_field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['field'] = 'field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['relationship'] = 'field_humprofile_non_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_host']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Non-Host */
   $handler->display->display_options['fields']['field_humprofile_non_host']['id'] = 'field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['table'] = 'field_data_field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['field'] = 'field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['relationship'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['fields']['field_humprofile_non_host']['label'] = 'Non Host';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_non_host']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Casualties */
   $handler->display->display_options['fields']['field_humprofile_cas_people']['id'] = 'field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['table'] = 'field_data_field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['field'] = 'field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: Dead */
   $handler->display->display_options['fields']['field_humprofile_dead']['id'] = 'field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['table'] = 'field_data_field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['field'] = 'field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['relationship'] = 'field_humprofile_casualities_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_dead']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Missing */
   $handler->display->display_options['fields']['field_humprofile_missing']['id'] = 'field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['table'] = 'field_data_field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['field'] = 'field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['relationship'] = 'field_humprofile_casualities_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_missing']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Injured */
   $handler->display->display_options['fields']['field_humprofile_injured']['id'] = 'field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['table'] = 'field_data_field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['field'] = 'field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['relationship'] = 'field_humprofile_casualities_value';
+  $handler->display->display_options['fields']['field_humprofile_injured']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: In Need of Humanitarian Assistance */
   $handler->display->display_options['fields']['field_humprofile_assistance']['id'] = 'field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['table'] = 'field_data_field_humprofile_assistance';
@@ -429,7 +465,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['field'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -462,63 +498,99 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: Displaced */
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['id'] = 'field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['table'] = 'field_data_field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['field'] = 'field_humprofile_dis_poeple';
   $handler->display->display_options['fields']['field_humprofile_dis_poeple']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: IDP */
   $handler->display->display_options['fields']['field_humprofile_idp']['id'] = 'field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['table'] = 'field_data_field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['field'] = 'field_humprofile_idp';
   $handler->display->display_options['fields']['field_humprofile_idp']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_idp']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Refugee and Asylum seekers */
   $handler->display->display_options['fields']['field_humprofile_refugee']['id'] = 'field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['table'] = 'field_data_field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['field'] = 'field_humprofile_refugee';
   $handler->display->display_options['fields']['field_humprofile_refugee']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_refugee']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Others of Concern */
   $handler->display->display_options['fields']['field_humprofile_others']['id'] = 'field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['table'] = 'field_data_field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['field'] = 'field_humprofile_others';
   $handler->display->display_options['fields']['field_humprofile_others']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_others']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Non-Displaced */
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['id'] = 'field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['table'] = 'field_data_field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['field'] = 'field_humprofile_non_dis_people';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['relationship'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['fields']['field_humprofile_non_dis_people']['label'] = 'Non Displaced';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_non_dis_people']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Host */
   $handler->display->display_options['fields']['field_humprofile_host']['id'] = 'field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['table'] = 'field_data_field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['field'] = 'field_humprofile_host';
   $handler->display->display_options['fields']['field_humprofile_host']['relationship'] = 'field_humprofile_non_displaced_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_host']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Non-Host */
   $handler->display->display_options['fields']['field_humprofile_non_host']['id'] = 'field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['table'] = 'field_data_field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['field'] = 'field_humprofile_non_host';
   $handler->display->display_options['fields']['field_humprofile_non_host']['relationship'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['fields']['field_humprofile_non_host']['label'] = 'Non Host';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_non_host']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Casualties */
   $handler->display->display_options['fields']['field_humprofile_cas_people']['id'] = 'field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['table'] = 'field_data_field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['field'] = 'field_humprofile_cas_people';
   $handler->display->display_options['fields']['field_humprofile_cas_people']['relationship'] = 'field_humprofile_displaced_value';
-  /* Field: Broken/missing handler */
+  /* Field: Field collection item: Dead */
   $handler->display->display_options['fields']['field_humprofile_dead']['id'] = 'field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['table'] = 'field_data_field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['field'] = 'field_humprofile_dead';
   $handler->display->display_options['fields']['field_humprofile_dead']['relationship'] = 'field_humprofile_casualities_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_dead']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Missing */
   $handler->display->display_options['fields']['field_humprofile_missing']['id'] = 'field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['table'] = 'field_data_field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['field'] = 'field_humprofile_missing';
   $handler->display->display_options['fields']['field_humprofile_missing']['relationship'] = 'field_humprofile_casualities_value';
-  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_humprofile_missing']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Field collection item: Injured */
   $handler->display->display_options['fields']['field_humprofile_injured']['id'] = 'field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['table'] = 'field_data_field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['field'] = 'field_humprofile_injured';
   $handler->display->display_options['fields']['field_humprofile_injured']['relationship'] = 'field_humprofile_casualities_value';
+  $handler->display->display_options['fields']['field_humprofile_injured']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: In Need of Humanitarian Assistance */
   $handler->display->display_options['fields']['field_humprofile_assistance']['id'] = 'field_humprofile_assistance';
   $handler->display->display_options['fields']['field_humprofile_assistance']['table'] = 'field_data_field_humprofile_assistance';
@@ -546,6 +618,25 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'highcharts';
+  $handler->display->display_options['style_options']['format']['chart_type'] = 'line';
+  $handler->display->display_options['style_options']['format']['title'] = 'Humanitarian Profile';
+  $handler->display->display_options['style_options']['format']['legend_enabled'] = 'yes';
+  $handler->display->display_options['style_options']['format']['swap_axes'] = 0;
+  $handler->display->display_options['style_options']['y_axis']['reversed'] = 0;
+  $handler->display->display_options['style_options']['x_axis']['dataset_data'] = array(
+    'field_humprofile_affected' => 'field_humprofile_affected',
+    'field_locations' => 0,
+    'field_humprofile_date' => 0,
+  );
+  $handler->display->display_options['style_options']['x_axis']['dataset_label'] = 'field_humprofile_date';
+  $handler->display->display_options['style_options']['x_axis']['reversed'] = 0;
+  $handler->display->display_options['style_options']['pie']['dataset_data'] = array(
+    'field_locations' => 0,
+    'field_humprofile_date' => 0,
+    'field_humprofile_affected' => 0,
+  );
+  $handler->display->display_options['style_options']['pie']['donut_hole'] = '0';
+  $handler->display->display_options['style_options']['pie']['data_labels'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -553,7 +644,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -597,24 +688,6 @@ PCode: [field_location_pcode]';
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile/graph';
-
-  /* Display: CSV */
-  $handler = $view->new_display('views_data_export', 'CSV', 'views_data_export_1');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
-  $handler->display->display_options['style_options']['provide_file'] = 1;
-  $handler->display->display_options['style_options']['filename'] = 'HumanitarianProfile.csv';
-  $handler->display->display_options['style_options']['parent_sort'] = 0;
-  $handler->display->display_options['style_options']['quote'] = 1;
-  $handler->display->display_options['style_options']['trim'] = 0;
-  $handler->display->display_options['style_options']['replace_newlines'] = 0;
-  $handler->display->display_options['style_options']['header'] = 1;
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile';
-  $handler->display->display_options['displays'] = array(
-    'page' => 'page',
-    'default' => 0,
-    'graph' => 0,
-  );
   $translatables['humanitarian_profile'] = array(
     t('Master'),
     t('Humanitarian Profile Summary'),
@@ -660,21 +733,19 @@ PCode: [field_location_pcode]'),
     t('field collection item from field_humprofile_non_displaced'),
     t('Date of Data'),
     t('Affected'),
-    t('Broken handler field_data_field_humprofile_dis_poeple.field_humprofile_dis_poeple'),
-    t('Broken handler field_data_field_humprofile_idp.field_humprofile_idp'),
-    t('Broken handler field_data_field_humprofile_refugee.field_humprofile_refugee'),
-    t('Broken handler field_data_field_humprofile_others.field_humprofile_others'),
+    t('IDP'),
+    t('Refugee and Asylum seekers'),
+    t('Others of Concern'),
     t('Non Displaced'),
-    t('Broken handler field_data_field_humprofile_host.field_humprofile_host'),
+    t('Host'),
     t('Non Host'),
-    t('Broken handler field_data_field_humprofile_cas_people.field_humprofile_cas_people'),
-    t('Broken handler field_data_field_humprofile_dead.field_humprofile_dead'),
-    t('Broken handler field_data_field_humprofile_missing.field_humprofile_missing'),
-    t('Broken handler field_data_field_humprofile_injured.field_humprofile_injured'),
+    t('Casualties'),
+    t('Dead'),
+    t('Missing'),
+    t('Injured'),
     t('Need Assistance'),
     t('XML'),
     t('Graph'),
-    t('CSV'),
   );
   $export['humanitarian_profile'] = $view;
 
