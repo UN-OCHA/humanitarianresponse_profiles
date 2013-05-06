@@ -9,6 +9,613 @@
  */
 function humanitarianresponse_profiles_field_default_field_instances() {
   $field_instances = array();
+  
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'.
+  $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'] = array(
+    'bundle' => 'field_humprofile_casualities',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '0',
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '0',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_cas_people',
+    'label' => 'Casualties',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '1',
+    ),
+  );
+  
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_dead'.
+  $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_dead'] = array(
+    'bundle' => 'field_humprofile_casualities',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '1',
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '1',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_dead',
+    'label' => 'Dead',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '2',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_injured'.
+  $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_injured'] = array(
+    'bundle' => 'field_humprofile_casualities',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '3',
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '3',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_injured',
+    'label' => 'Injured',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '4',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_missing'.
+  $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_missing'] = array(
+    'bundle' => 'field_humprofile_casualities',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '2',
+      ),
+      'full' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '2',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_missing',
+    'label' => 'Missing',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '3',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'.
+  $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'] = array(
+    'bundle' => 'field_humprofile_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '0',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '0',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_dis_poeple',
+    'label' => 'Displaced',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '1',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_idp'.
+  $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_idp'] = array(
+    'bundle' => 'field_humprofile_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '1',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '1',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_idp',
+    'label' => 'IDP',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '2',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_others'.
+  $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_others'] = array(
+    'bundle' => 'field_humprofile_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '3',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '3',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_others',
+    'label' => 'Others of Concern',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '4',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_refugee'.
+  $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_refugee'] = array(
+    'bundle' => 'field_humprofile_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '2',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '2',
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_refugee',
+    'label' => 'Refugee and Asylum seekers',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '3',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_host'.
+  $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_host'] = array(
+    'bundle' => 'field_humprofile_non_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '1',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_host',
+    'label' => 'Host',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '2',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'.
+  $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'] = array(
+    'bundle' => 'field_humprofile_non_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '0',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_non_dis_people',
+    'label' => 'Non-Displaced',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '1',
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'.
+  $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'] = array(
+    'bundle' => 'field_humprofile_non_displaced',
+    'default_value' => NULL,
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 0,
+          'scale' => 0,
+          'thousand_separator' => ',',
+        ),
+        'type' => 'number_integer',
+        'weight' => '2',
+      ),
+      'entityreference_view_widget' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_humprofile_non_host',
+    'label' => 'Non-Host',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+      'entity_translation_sync' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => '3',
+    ),
+  );
 
   // Exported field_instance: 'node-humanitarian_profile-field_humprofile_affected'
   $field_instances['node-humanitarian_profile-field_humprofile_affected'] = array(
