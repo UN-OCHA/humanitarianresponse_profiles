@@ -9,12 +9,12 @@
  */
 function humanitarianresponse_profiles_field_default_field_instances() {
   $field_instances = array();
-  
-  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'.
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'
   $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_cas_people'] = array(
     'bundle' => 'field_humprofile_casualities',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -27,7 +27,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '0',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'inline',
@@ -39,7 +39,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '0',
+        'weight' => 0,
       ),
       'ical' => array(
         'label' => 'above',
@@ -53,27 +53,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Casualties',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '1',
+      'weight' => 1,
     ),
   );
-  
-  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_dead'.
+
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_dead'
   $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_dead'] = array(
     'bundle' => 'field_humprofile_casualities',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -86,7 +86,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '1',
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'inline',
@@ -98,7 +98,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '1',
+        'weight' => 1,
       ),
       'ical' => array(
         'label' => 'above',
@@ -112,27 +112,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Dead',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '2',
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_injured'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_injured'
   $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_injured'] = array(
     'bundle' => 'field_humprofile_casualities',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -145,7 +145,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '3',
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -157,7 +157,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '3',
+        'weight' => 3,
       ),
       'ical' => array(
         'label' => 'above',
@@ -171,27 +171,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Injured',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '4',
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_missing'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_casualities-field_humprofile_missing'
   $field_instances['field_collection_item-field_humprofile_casualities-field_humprofile_missing'] = array(
     'bundle' => 'field_humprofile_casualities',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -204,7 +204,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '2',
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'inline',
@@ -216,7 +216,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '2',
+        'weight' => 2,
       ),
       'ical' => array(
         'label' => 'above',
@@ -230,27 +230,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Missing',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '3',
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'
   $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_dis_poeple'] = array(
     'bundle' => 'field_humprofile_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -263,13 +263,13 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '0',
+        'weight' => 0,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => '0',
+        'weight' => 0,
       ),
       'ical' => array(
         'label' => 'above',
@@ -283,27 +283,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Displaced',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '1',
+      'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_idp'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_idp'
   $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_idp'] = array(
     'bundle' => 'field_humprofile_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -316,13 +316,13 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '1',
+        'weight' => 1,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => '1',
+        'weight' => 1,
       ),
       'ical' => array(
         'label' => 'above',
@@ -336,27 +336,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'IDP',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '2',
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_others'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_others'
   $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_others'] = array(
     'bundle' => 'field_humprofile_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -369,13 +369,13 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '3',
+        'weight' => 3,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => '3',
+        'weight' => 3,
       ),
       'ical' => array(
         'label' => 'above',
@@ -389,27 +389,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Others of Concern',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '4',
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_refugee'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_displaced-field_humprofile_refugee'
   $field_instances['field_collection_item-field_humprofile_displaced-field_humprofile_refugee'] = array(
     'bundle' => 'field_humprofile_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -422,13 +422,13 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '2',
+        'weight' => 2,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => '2',
+        'weight' => 2,
       ),
       'ical' => array(
         'label' => 'above',
@@ -442,27 +442,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Refugee and Asylum seekers',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '3',
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_host'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_host'
   $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_host'] = array(
     'bundle' => 'field_humprofile_non_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -475,7 +475,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '1',
+        'weight' => 1,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -495,27 +495,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Host',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '2',
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'
   $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_dis_people'] = array(
     'bundle' => 'field_humprofile_non_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -528,7 +528,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '0',
+        'weight' => 0,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -548,27 +548,27 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Non-Displaced',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '1',
+      'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'.
+  // Exported field_instance: 'field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'
   $field_instances['field_collection_item-field_humprofile_non_displaced-field_humprofile_non_host'] = array(
     'bundle' => 'field_humprofile_non_displaced',
     'default_value' => NULL,
-    'deleted' => '0',
+    'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
@@ -581,7 +581,7 @@ function humanitarianresponse_profiles_field_default_field_instances() {
           'thousand_separator' => ',',
         ),
         'type' => 'number_integer',
-        'weight' => '2',
+        'weight' => 2,
       ),
       'entityreference_view_widget' => array(
         'label' => 'above',
@@ -601,19 +601,19 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'label' => 'Non-Host',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
-      'entity_translation_sync' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => '3',
+      'weight' => 3,
     ),
   );
 
@@ -1128,9 +1128,9 @@ function humanitarianresponse_profiles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'hs_taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hs_taxonomy_term_reference_hierarchical_text',
         'weight' => 10,
       ),
       'ical' => array(
@@ -1213,12 +1213,20 @@ function humanitarianresponse_profiles_field_default_field_instances() {
   t('Affected');
   t('Casualties');
   t('Date of Data');
+  t('Dead');
   t('Displaced');
+  t('Host');
+  t('IDP');
   t('In Need of Humanitarian Assistance');
+  t('Injured');
   t('Location(s)');
   t('Methodology');
+  t('Missing');
   t('Non-Displaced');
+  t('Non-Host');
   t('Notes');
+  t('Others of Concern');
+  t('Refugee and Asylum seekers');
   t('Source');
   t('Title');
 
