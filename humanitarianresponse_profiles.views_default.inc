@@ -116,7 +116,7 @@ function humanitarianresponse_profiles_views_default_views() {
 
 When it is available, a more detailed humanitarian profile dataset may be found on the Common Operational Datasets Registry . The information presented on HumanitarianResponse.info represents a summary of that dataset if it is available. Otherwise, the tables presented here represent the most detailed information available. <a href="http://cod.humanitarianresponse.info/node/52">Full Humanitarian Profile guidance.</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  /* Relationship: Content: Location (field_locations) */
+  /* Relationship: Field: Location (field_locations) */
   $handler->display->display_options['relationships']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['relationships']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['relationships']['field_locations_tid']['field'] = 'field_locations_tid';
@@ -133,7 +133,7 @@ When it is available, a more detailed humanitarian profile dataset may be found 
   $handler->display->display_options['fields']['field_location_pcode']['label'] = '';
   $handler->display->display_options['fields']['field_location_pcode']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_location_pcode']['element_label_colon'] = FALSE;
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -247,7 +247,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'humanitarian_profile' => 'humanitarian_profile',
   );
-  /* Filter criterion: Content: Location (field_locations) */
+  /* Filter criterion: Field: Location (field_locations) */
   $handler->display->display_options['filters']['field_locations_tid']['id'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['table'] = 'field_data_field_locations';
   $handler->display->display_options['filters']['field_locations_tid']['field'] = 'field_locations_tid';
@@ -262,7 +262,7 @@ PCode: [field_location_pcode]';
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile';
+  $handler->display->display_options['path'] = 'humanitarian-profile';
 
   /* Display: XLS */
   $handler = $view->new_display('views_data_export', 'XLS', 'xls');
@@ -291,7 +291,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['field'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -431,7 +431,7 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile.xls';
+  $handler->display->display_options['path'] = 'humanitarian-profile.xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -465,7 +465,7 @@ PCode: [field_location_pcode]';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['field'] = 'field_humprofile_non_displaced_value';
   $handler->display->display_options['relationships']['field_humprofile_non_displaced_value']['delta'] = '-1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Location */
+  /* Field: Field: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
   $handler->display->display_options['fields']['field_locations']['field'] = 'field_locations';
@@ -605,12 +605,11 @@ PCode: [field_location_pcode]';
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
-  $handler->display->display_options['path'] = 'visuals-data/humanitarian-profile.xml';
+  $handler->display->display_options['path'] = 'humanitarian-profile.xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
   );
-
   $translatables['humanitarian_profile'] = array(
     t('Master'),
     t('Humanitarian Profile Summary'),
